@@ -1,0 +1,125 @@
+.br-header.compact {
+  background-color: #fff;
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--spacing-scale-6x);
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      img { height: 32px; }
+      .header-sign { margin-left: var(--spacing-scale-base); }
+    }
+  }
+
+  .header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--spacing-scale-7x);
+
+    .header-title {
+      color: var(--interactive-light);
+    }
+
+    .br-menu ul {
+      display: flex;
+      list-style: none;
+      gap: var(--spacing-scale-3x);;
+      margin: 0;
+
+      .menu-item {
+        text-decoration: none;
+        color: var(--text-on-light);
+        font-weight: var(--font-weight-medium);
+        font-size: var(--font-size-scale-base);
+        line-height: var(--font-lineheight-medium);
+        padding: 16px 0;
+        border-bottom: 4px solid transparent;
+
+        &.active {
+          color: var(--interactive-light);
+          border-bottom-color: var(--interactive-light);
+        }
+      }
+    }
+  }
+}
+
+/* Estilo do Breadcrumb baseado na documentação DSGOV */
+.br-breadcrumb {
+  display: block;
+  padding: var(--spacing-scale-base) 0;
+  font-size: var(--font-size-scale-down-01);
+  font-weight: var(--font-weight-medium);
+  position: relative;
+
+  .crumb-list {
+    align-items: center;
+    border: 0;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+  }
+
+  .crumb {
+    align-items: center;
+    display: flex;
+    height: var(--spacing-scale-5x);
+
+    .icon {
+      color: var(--border-color);
+      font-size: var(--icon-size-sm);
+      margin: 0 var(--spacing-scale-base);
+    }
+
+    a {
+      text-decoration: none;
+      max-width: 180px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--interactive-light);
+
+      &:not(.br-button) {
+        margin: 0 var(--spacing-scale-base);
+      }
+    }
+
+    &[data-active="active"] {
+      color: var(--text-on-light);
+      font-weight: var(--font-weight-medium);
+
+      span {
+        margin: 0 var(--spacing-scale-2x) 0 var(--spacing-scale-base);
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .home {
+    margin: 0 var(--spacing-scale-base) 0 0;
+  }
+}
+
+.br-divider.vertical {
+  border-left: 1px solid var(--border-color);
+  display: inline-block;
+  height: 24px;
+  margin: 0 var(--spacing-scale-base);
+  vertical-align: middle;
+  width: 1px;
+}
+
+.br-divider:not(.vertical) {
+  display: block;
+  border-top: 1px solid var(--border-color);
+  margin-bottom: var(--spacing-scale-2x);
+  width: 100%;
+}

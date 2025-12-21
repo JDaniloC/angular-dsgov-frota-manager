@@ -1,0 +1,64 @@
+<header class="br-header compact">
+  <div class="container-lg">
+    <div class="header-top">
+      <div class="header-logo">
+        <img src="assets/images/logo.svg" alt="Logotipo do Governo Federal" />
+        <span class="br-divider vertical"></span>
+        <div class="header-sign label">Governo Federal</div>
+      </div>
+      <div class="header-actions">
+        <div class="header-functions">
+          <button class="br-button circle small" type="button" aria-label="Alto Contraste">
+            <i class="fas fa-adjust" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="header-menu">
+        <div class="header-info">
+          <div class="header-title h3">Frota Gerencial</div>
+        </div>
+      </div>
+      <nav class="br-menu" aria-label="Menu Principal">
+        <ul>
+          <li>
+            <a class="menu-item" routerLink="/dashboard" routerLinkActive="active">
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a class="menu-item" routerLink="/consulta" routerLinkActive="active">
+              Consulta
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<nav class="br-breadcrumb" aria-label="Breadcrumb">
+  <div class="container-lg">
+    <ol class="crumb-list" role="list">
+      <li class="crumb home">
+        <a class="br-button circle" routerLink="/">
+          <span class="sr-only">Página inicial</span>
+          <i class="fas fa-home" aria-hidden="true"></i>
+        </a>
+      </li>
+      <!-- Itera sobre o array de breadcrumbs gerado dinamicamente -->
+      <ng-container *ngFor="let breadcrumb of breadcrumbs; let last = last">
+        <li class="crumb" [attr.data-active]="last ? 'active' : null">
+          <i class="fas fa-chevron-right icon" aria-hidden="true"></i>
+          <!-- Se não for o último item, cria um link. Senão, apenas um span. -->
+          <a *ngIf="!last" [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
+          <span *ngIf="last" aria-current="page">{{ breadcrumb.label }}</span>
+        </li>
+      </ng-container>
+    </ol>
+  </div>
+</nav>
+
+<div class="br-divider"></div>

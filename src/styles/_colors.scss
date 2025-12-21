@@ -1,6 +1,7 @@
 /*DSGOV*/
 :root {
   --pure-0: #ffffff;
+  --gray-20: #cccccc;
   --gray-80: #333333;
   --gray-5: #f2f2f2;
 
@@ -22,6 +23,7 @@
   /* Texto */
   --text-on-light: var(--gray-80);
   --text-on-dark: var(--pure-0);
+  --border-color: var(--gray-20);
 
   /* Interação */
   --interactive-light: var(--blue-warm-vivid-70);

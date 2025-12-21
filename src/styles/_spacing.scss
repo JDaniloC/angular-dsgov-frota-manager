@@ -3,16 +3,18 @@
   --spacing-scale-default: 0;
 
   /* Escala Layout (8px)*/
-  --spacing-scale-base: 1em;    /* 8px */
-  --spacing-scale-2x: 2em;      /* 16px */
-  --spacing-scale-3x: 3em;      /* 24px */
-  --spacing-scale-4x: 4em;      /* 32px */
-  --spacing-scale-5x: 5em;      /* 40px */
-  --spacing-scale-6x: 6em;      /* 48px */
+  --spacing-scale-base: 8px;
+  --spacing-scale-2x: 16px;
+  --spacing-scale-3x: 24px;
+  --spacing-scale-4x: 32px;
+  --spacing-scale-5x: 40px;
+  --spacing-scale-6x: 48px;
+  --spacing-scale-7x: 56px;
+  --spacing-scale-9x: 72px;
 
   /* Escala Ajuste (4px)*/
-  --spacing-scale-half: 0.5em;  /* 4px */
-  --spacing-scale-baseh: 1.5em; /* 12px */
-  --spacing-scale-2xh: 2.5em;   /* 20px */
-  --spacing-scale-3xh: 3.5em;   /* 28px */
+  --spacing-scale-half: 4px;
+  --spacing-scale-baseh: 12px;
+  --spacing-scale-2xh: 20px;
+  --spacing-scale-3xh: 28px;
 }

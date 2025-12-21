@@ -11,7 +11,6 @@
   padding: 0;
 }
 
-
 html {
     font-size: 14px;
 }
@@ -24,3 +23,21 @@ body {
     background-color: var(--surface-light);
 }
 
+/* Classe para acessibilidade, esconde visualmente mas mantém para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.container-lg {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-scale-2x);
+}

@@ -22,30 +22,55 @@
     --font-size-scale-up-05: 2.488em;
     --font-size-scale-up-06: 2.986em;
 
+    --font-size-scale-down-01: 0.857em; /* ~12px */
+    --icon-size-sm: 0.857em; /* ~12px */
+
     /* Line Heigth */
     --font-lineheight-low: 1.15;
     --font-lineheight-medium: 1.45;
 }
 
-h1 {
+.h1, h1 {
   font-size: var(--font-size-scale-up-06);
   font-weight: var(--font-weight-light);
   line-height: var(--font-lineheight-low);
 }
 
-h2 {
+.h2, h2 {
   font-size: var(--font-size-scale-up-05);
   font-weight: var(--font-weight-regular);
   line-height: var(--font-lineheight-low);
 }
 
-h3 {
+.h3, h3 {
   font-size: var(--font-size-scale-up-04);
   font-weight: var(--font-weight-medium);
 }
 
-p {
+.h4, h4 {
+  font-size: var(--font-size-scale-up-03);
+  font-weight: var(--font-weight-bold);
+}
+
+.h5, h5 {
+  font-size: var(--font-size-scale-up-02);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+.h6, h6 {
+  font-size: var(--font-size-scale-up-01);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+.p, p {
   font-size: var(--font-size-scale-up-01);
   font-weight: var(--font-weight-regular);
   line-height: var(--font-lineheight-medium);
+}
+
+.label, label {
+  font-size: var(--font-size-scale-base);
+  font-weight: var(--font-weight-bold);
 }
