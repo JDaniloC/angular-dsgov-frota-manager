@@ -1,0 +1,53 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.br-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--pure-0, #ffffff);
+  padding: var(--spacing-scale-3x, 24px);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-left: 4px solid var(--blue-warm-vivid-70, #1351B4); 
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-scale-3x, 24px);
+}
+
+.kpi-icon .fas {
+  font-size: var(--font-size-scale-up-04);
+  color: var(--blue-warm-vivid-70, #1351B4);
+  width: 40px;
+  text-align: center;
+}
+
+.kpi-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi-title {
+  margin: 0 0 var(--spacing-scale-half) 0;
+  font-size: var(--font-size-scale-base, 1rem);
+  color: var(--gray-80, #333333);
+}
+
+.kpi-value {
+  margin: 0;
+  font-size: var(--font-size-scale-up-03, 2rem);
+  font-weight: var(--font-weight-bold, 700);
+  line-height: 1.2;
+}
+
+.kpi-label {
+  margin-top: var(--spacing-scale-half);
+  font-size: var(--font-size-scale-down-01, 0.875rem);
+  color: var(--text-on-light, #666666);
+}

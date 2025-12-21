@@ -1,0 +1,56 @@
+<div class="container-lg"> <div class="row kpi-row">
+    <div class="col-sm-4"> <app-kpi-card 
+        title="Preço Médio" 
+        [value]="((precoMedioGasolina$ | async) | currency:'BRL') ?? 'R$ 0,00'" 
+        label="Gasolina (Dez/2024)"
+        icon="fa-gas-pump">
+      </app-kpi-card>
+    </div>
+    <div class="col-sm-4">
+      <app-kpi-card 
+        title="Preço Médio" 
+        [value]="((precoMedioDiesel$ | async) | currency:'BRL') ?? 'R$ 0,00'" 
+        label="Diesel (Dez/2024)"
+        icon="fa-truck">
+      </app-kpi-card>
+    </div>
+    <div class="col-sm-4">
+      <app-kpi-card 
+        title="Total de Litros" 
+        [value]="((totalLitros$ | async) ?? 0)" 
+        label="Últimos 30 dias"
+        icon="fa-fill-drip">
+      </app-kpi-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 mb-4"> <div class="chart-card">
+        <h3 class="h3">Evolução de Preços (Últimos 6 meses)</h3>
+        <div *ngIf="lineChartOptions$ | async as options">
+          <apx-chart
+            [series]="options.series"
+            [chart]="options.chart"
+            [xaxis]="options.xaxis"
+            [colors]="options.colors"
+            [stroke]="options.stroke">
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 mb-4">
+      <div class="chart-card">
+        <h3 class="h3">Consumo por Estado (Top 10)</h3>
+        <div *ngIf="barChartOptions$ | async as options">
+          <apx-chart
+            [series]="options.series"
+            [chart]="options.chart"
+            [xaxis]="options.xaxis"
+            [colors]="options.colors">
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
