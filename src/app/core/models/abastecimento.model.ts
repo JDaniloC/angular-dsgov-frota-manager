@@ -1,5 +1,5 @@
 export interface Abastecimento {
-  id: number;
+  id: string;
   data: string;
   posto: string;
   uf: string;

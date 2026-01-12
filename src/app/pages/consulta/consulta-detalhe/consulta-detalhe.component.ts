@@ -27,11 +27,11 @@ export class ConsultaDetalheComponent implements OnInit {
     // Isso garante que os dados sejam atualizados se o ID na URL mudar
     // sem que o usuário saia da página (ex: navegação interna).
     this.abastecimento$ = this.route.paramMap.pipe(
-      map(params => Number(params.get('id'))),
+      map(params => params.get('id')),
       switchMap(id =>
         this.consultaFacade.abastecimentosFiltrados$.pipe(
-          map(lista => lista.find(item => item.id === id))
-        )
+          map(lista => lista.find(item => item.id === id)
+        ))
       )
     );
   }
